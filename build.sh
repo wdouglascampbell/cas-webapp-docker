@@ -20,7 +20,7 @@ if [[ "${cas_version}" == *"master"* ]]; then
   branch_name="master"
 else
   image_tag="v${cas_version}"
-  branch_name="`echo "${cas_version}" | cut -d. -f1 -f2`"
+  branch_name="`echo "${cas_version}" | cut -d. -f1,2`"
 fi
 
 if [ ! -z "$cas_version" ]
